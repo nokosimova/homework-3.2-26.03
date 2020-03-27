@@ -16,14 +16,14 @@ namespace Problem2
             b = int.Parse(nums[1]);
             c = int.Parse(nums[2]);
             d = int.Parse(nums[3]);
-            if (a == b & b == c & c == d){
+            if (a == b && b == c && c == d){
                 result = a*b*c*d;
                 Console.WriteLine($"res = {result}");
             } else if (a < b && b < c && c < d) {
+                Console.WriteLine("Числа расположены по возрастанию");
+            } else {
                 result = Math.Min(Math.Min(a,b),Math.Min(c,d));
                 Console.WriteLine($"res = {result}");
-            } else {
-                Console.WriteLine("Числа расположены не по возрастанию");
             }
         }
     }
